@@ -12,6 +12,9 @@ curl -Lo /home/vagrant/.ssh/authorized_keys \
 chmod 0600 /home/vagrant/.ssh/authorized_keys
 chown -R vagrant:vagrant /home/vagrant/.ssh
 
+# Set up sudo
+echo 'vagrant ALL=NOPASSWD:ALL' > /etc/sudoers.d/vagrant
+
 # Customize the message of the day
 echo 'Welcome to your Vagrant-built virtual machine.' > /var/run/motd
 

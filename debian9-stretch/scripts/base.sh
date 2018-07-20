@@ -14,9 +14,6 @@ apt-get install -qqy unzip curl jq net-tools dnsutils curl wget vim \
 # Remove unneeded items
 apt-get -qy purge exim4 exim4-base
 
-# Set up sudo
-echo 'vagrant ALL=NOPASSWD:ALL' > /etc/sudoers.d/vagrant
-
 # Disable barriers on root filesystem
 sed -i 's/noatime,errors/nobarrier,noatime,nodiratime,errors/' /etc/fstab
 
