@@ -4,13 +4,12 @@ export DEBIAN_FRONTEND=noninteractive
 
 # Update the box
 apt-get -qqy update
-apt-get -qqy upgrade
+apt-get -qqy dist-upgrade
 apt-get -qqy install linux-headers-$(uname -r) build-essential
 
 # Install development tools
 apt-get install -qqy unzip curl jq net-tools dnsutils curl wget vim \
-  mc screen lsof htop iotop dstat telnet tcpdump jq gnupg git 
-  
+  mc screen lsof htop iotop dstat telnet tcpdump jq gnupg git psmisc lynx
 
 # Remove unneeded items
 apt-get -qy purge exim4 exim4-base
@@ -37,3 +36,5 @@ GRUB_CMDLINE_LINUX="debian-installer=en_US"
 EOF
 
 update-grub
+
+reboot

@@ -5,8 +5,8 @@
     "disk_size": "75000",
     "ssh_port": "22",
     "ssh_wait_timeout": "10000s",
-    "iso_url": "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-9.4.0-amd64-netinst.iso",
-    "iso_md5": "73bd8aaaeb843745ec939f6ae3906e48",
+    "iso_url": "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-9.5.0-amd64-netinst.iso",
+    "iso_md5": "f8446a84356a6bcbf79201cc9f46063f",
     "vm_name": "stretch64"
   },
   "builders": [
@@ -58,6 +58,7 @@
   "provisioners": [
     {
       "type": "shell",
+      "expect_disconnect": true,
       "pause_before": "5s",
       "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'",
       "override": {
