@@ -8,8 +8,8 @@ apt-get -qqy dist-upgrade
 apt-get -qqy install linux-headers-$(uname -r) build-essential
 
 # Install development tools
-apt-get install -qqy unzip curl jq net-tools dnsutils curl wget vim \
-  mc screen lsof htop iotop dstat telnet tcpdump jq gnupg git psmisc lynx
+apt-get install -qqy unzip jq net-tools dnsutils curl wget vim psmisc \
+  mc screen lsof htop iotop dstat telnet tcpdump jq gnupg git lynx
 
 # Remove unneeded items
 apt-get -qy purge exim4 exim4-base
