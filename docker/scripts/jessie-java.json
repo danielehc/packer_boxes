@@ -1,0 +1,30 @@
+{
+    "variables": {
+    },
+    "builders": [
+        {
+            "commit": true,
+            "image": "jessie:latest",
+            "pull": false,
+            "type": "docker",
+            "run_command": [
+                "-d","-t","{{.Image}}",
+                "/bin/bash","-l"
+            ]
+        }
+    ],
+    "post-processors": [
+        {
+            "repository": "jessie-java",
+            "tag": "latest",
+            "type": "docker-tag"
+        }
+    ],
+    "provisioners": [
+        {
+            "execute_command": "native={{user `native`}} {{.Vars}} '{{.Path}}'",
+            "script": "jessie-java.sh",
+            "type": "shell"
+        }
+    ]
+}

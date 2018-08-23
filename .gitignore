@@ -1,4 +1,10 @@
 .vagrant/
 packer_cache/
+.kitchen/
+
+pkg/
+doc/
+priv/
+
 *.box
 *.log
