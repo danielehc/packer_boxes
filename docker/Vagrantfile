@@ -18,8 +18,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       rs.vm.provision "shell", path: "scripts/base.sh", run: "always"    
       rs.vm.provision "shell", path: "scripts/packer.sh", run: "always"    
       rs.vm.provision "shell", path: "scripts/docker.sh", run: "always"     
-    #   rs.vm.provision "shell", path: "scripts/azure_cli.sh", run: "always"              
-    #   rs.vm.provision "shell", path: "scripts/chefdk.sh", run: "always"          
   end
 
 end
